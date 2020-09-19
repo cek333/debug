@@ -3,13 +3,13 @@ This repo contains a website that will help the user to generate a strong passwo
 
 ## Usage
 * Click on the red 'Generate Password' button to being the process. <br>
-  ![Screenshot of the UI and the 'Generate Password' button](assets/readme/generate_password_ui.png)
+  > ![Screenshot of the UI and the 'Generate Password' button](assets/readme/generate_password_ui.png)
 * You'll then be prompted to enter the password length. <br>
-  ![Screenshot showing prompt to enter the password length](assets/readme/password_length_prompt.png) <br>
+  > ![Screenshot showing prompt to enter the password length](assets/readme/password_length_prompt.png) <br>
   Enter a number from 8 to 128. Pressing 'Cancel' will abort/stop the password generating process.
 * You'll then be prompted to specify the character types you'd like to include in the password. <br>
   The following prompt asks whether you'd like to include 'lowercase' characters: <br>
-  ![Screenshot of prompt asking if you'd like to include lowercase characters](assets/readme/character_type_prompt.png) <br>
+  > ![Screenshot of prompt asking if you'd like to include lowercase characters](assets/readme/character_type_prompt.png) <br>
   You'll receive similar prompts to confirm the inclusion of uppercase, numeric, and special characters.
 * After you've specified the various criteria, the generated password will be displayed within the textbox area.
 
