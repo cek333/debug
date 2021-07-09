@@ -3,13 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fab15f6c83.js" crossorigin="anonymous"></script>
   <title>Debugging</title>
+  <style>
+    .sort-none {
+      color: transparent;
+      background-clip: text;
+      background-image: url(assets/images/sort_none.png);
+    }
+    .sort-asc {
+      color: transparent;
+      background-clip: text;
+      background-image: url(assets/images/sort_asc.png);
+    }
+    .sort-desc {
+      color: transparent;
+      background-clip: text;
+      background-image: url(assets/images/sort_desc.png);
+    }
+    div {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <p>Hello World</p>
+  <p>Hello Sunshine</p>
+  <div>
+    <span>Name</span>
+    <span><i class="fas fa-sort sort-none"></i></span>
+  </div>
+  <div>
+    <span>Name</span>
+    <span><i class="fas fa-sort sort-asc"></i></span>
+  </div>
+  <div>
+    <span>Name</span>
+    <span><i class="fas fa-sort sort-desc"></i></span>
+  </div>
+  <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script>
-    console.log("Hello World")
+    console.log("Hello Sunshine")
+    const el = document.querySelector('#user');
+
+    console.log(el.id); // == 'user'
+    console.log(el.dataset.id); // === '1234567890'
+    console.log(el.dataset.user); // === 'johndoe'
+    console.log(el.dataset); 
+    var test1 = el.dataset;
+    console.log(`test1`, test1);
+    var test2 = JSON.parse(el.dataset);
+    console.log(`test2`, test2);
+    // el.dataset.dateOfBirth === ''
+
+    // set the data attribute
+    el.dataset.dateOfBirth = '1960-10-03'; 
+    // Result: el.dataset.dateOfBirth === 1960-10-03
+
+    delete el.dataset.dateOfBirth;
+    // Result: el.dataset.dateOfBirth === undefined
+
+    // 'someDataAttr' in el.dataset === false
+    el.dataset.someDataAttr = 'mydata';
+    // Result: 'someDataAttr' in el.dataset === true
   </script>
 </body>
 </html>
